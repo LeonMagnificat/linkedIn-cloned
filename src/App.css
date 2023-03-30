@@ -1,0 +1,838 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;1,200&display=swap');
+
+.App {
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+#root {
+  background-color: #f3f2ef;
+  position: relative;
+  padding-top: 4em;
+  min-height: 100vh;
+}
+#root > nav {
+  background-color: white;
+  height: 60px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  z-index: 6;
+  border-bottom: #c6c5c3 solid 1pt;
+}
+
+/*Navbar stuff
+#root > nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+#root > nav > div.d-flex > a {
+  display: flex;
+  align-items: center;
+}
+.searchBar {
+  display: flex;
+  align-items: center;
+}
+.mainNavLinksBox {
+  display: flex;
+  width: 900px;
+}
+.mainNavLinks {
+  display: flex;
+}*/
+
+/*userInfo*/
+
+#root > div > div {
+  gap: 25px;
+}
+
+#profileContainer {
+  border-radius: 10px;
+  background-color: white;
+  overflow: hidden;
+  position: relative;
+  width: 50rem;
+  padding-bottom: 1em;
+  box-shadow: #c6c5c3 0px 0px 5px;
+}
+#upperCardBackgroundImage {
+  background-image: url(https://farm5.staticflickr.com/4902/44891418625_2056c2bf9f_o.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+}
+#userProfilePic {
+  position: absolute;
+  top: 100px;
+  left: 25px;
+  width: 150px;
+  height: 150px;
+  border: solid white 3pt;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: white;
+}
+#lowerProfileCard {
+  background-color: white;
+  padding: 4em 1em 0em 1em;
+}
+#editButton {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #5e5e5e;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#editButton:hover {
+  background-color: #ebebeb;
+}
+
+#lowerProfileCardExperience {
+  background-color: white;
+  padding: 1em 1em 0em 1em;
+}
+
+#analyticsContainer {
+  background-color: white;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: #c6c5c3 0px 0px 5px;
+}
+#analyticsContainer p {
+  font-weight: 300;
+  color: gray;
+  padding-left: 0.5em;
+  margin: 0;
+  width: 140px;
+}
+#analyticsContainer svg {
+  color: gray;
+}
+
+/*Experience*/
+.companylogo {
+  width: 60px;
+  height: 60px;
+}
+
+/*PROFILE RIGHT*/
+#profileRight {
+  background-color: white;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: #c6c5c3 0px 0px 5px;
+}
+#profileRight a {
+  text-decoration: none;
+  color: black;
+}
+.lineBreaks {
+  color: #c6c5c3;
+}
+
+/* TOP NAV */
+#topNavRight .top-nav-links {
+  text-decoration: none;
+}
+.top-nav-text-icons {
+  color: #666666;
+}
+
+.top-nav-text-icons:hover {
+  color: #191919;
+}
+.navbar-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #666666;
+}
+
+.navbar-links:hover {
+  color: #191919;
+}
+
+.navbar-icons,
+.top-nav-work-icon,
+.top-nav-profile-icon {
+  font-size: 1.5rem;
+}
+
+.navbar-icons:hover,
+.top-nav-work-icon:hover,
+.top-nav-profile-icon:hover,
+.topNavMeBox:hover,
+.topNavWorkBox:hover {
+  color: #191919;
+}
+
+.topNavMeBox,
+.topNavWorkBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #666666;
+}
+
+#generalSearchArea {
+  background-color: #eef3f8;
+  margin-left: 0.4em;
+  padding: 6px 4px;
+  border-radius: 5px;
+  -webkit-transition: width 1s ease-in-out;
+  transition: border, width 1s ease-in-out;
+}
+
+.searchInput {
+  width: 100%;
+}
+
+.searchInput input {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  width: 100%;
+}
+
+.searchSetSelected {
+  border: #191919 solid 2px;
+  width: 400px;
+}
+
+#basic-nav-dropdown {
+  padding: 0;
+  font-size: 10pt;
+  margin-top: 5px;
+}
+
+#basic-navbar-nav
+  > div
+  > div.d-flex.justify-content-between.align-items-center {
+  height: 60px;
+  width: 444px;
+  padding-right: 1em;
+  border-right: #c6c5c3 solid 1pt;
+}
+
+#basic-navbar-nav .dropdown-item:hover {
+  background-color: transparent;
+}
+
+/*try for free text*/
+#basic-navbar-nav > div > div.topNavWorkBox > div > div:nth-child(2) {
+  display: flex;
+  flex-wrap: wrap;
+  width: 114px;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 10pt;
+}
+
+#basic-navbar-nav
+  > div
+  > div.topNavWorkBox
+  > div
+  > div:nth-child(2)
+  > #trypremium {
+  color: #d59509;
+}
+#basic-navbar-nav
+  > div
+  > div.topNavWorkBox
+  > div
+  > div:nth-child(2)
+  #trypremium:hover {
+  color: #533903;
+}
+
+/*TOP NAV: user drop-down modal*/
+#basic-navbar-nav
+  > div
+  > div.d-flex.justify-content-between.align-items-center
+  > div
+  > div.nav-item.show.dropdown
+  > div {
+  width: 250px;
+  left: -202px;
+  top: 40px;
+  border-radius: 10px 0px 10px 10px;
+}
+
+#basic-navbar-nav
+  > div
+  > div.d-flex.justify-content-between.align-items-center
+  > div
+  > div.nav-item.show.dropdown
+  > div
+  > div.dropdown-item
+  > div
+  > button {
+  background-color: transparent;
+  color: blue;
+  padding: 0;
+}
+
+/*TOP NAV: user modal button*/
+#basic-navbar-nav
+  > div
+  > div.d-flex.justify-content-center.align-items-center
+  > div
+  > div.nav-item.show.dropdown
+  > div
+  > a:nth-child(1)
+  > div
+  > button {
+  padding: 0;
+  background-color: transparent;
+  color: blue;
+}
+
+#NavBottom {
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  z-index: 5;
+  box-shadow: black 1px 0px 5px;
+  transition: transform 0.9s ease-in-out;
+  padding: 0.3em 0;
+}
+
+.translateYAnimation {
+  transform: translateY(60px);
+}
+
+#bottomNavProfilePicBox {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.bottomNavButtons {
+  padding: 0.2em 1em;
+}
+
+#moreBtn {
+  color: gray;
+  border: 2px gray solid;
+  background-color: transparent;
+  transition: box-shadow 0.2s ease-in-out;
+}
+#moreBtn:hover {
+  background-color: lightgray;
+  box-shadow: inset 0 0 0 1px gray;
+}
+
+#addToProfileBtn {
+  color: #0a66c2;
+  border: 2px #0a66c2 solid;
+  background-color: transparent;
+  transition: box-shadow 0.2s ease-in-out;
+}
+#addToProfileBtn:hover {
+  background-color: #e2f0fe;
+  box-shadow: inset 0 0 0 1px #0a66c2;
+}
+
+#openBtn {
+  color: white;
+  background-color: #0a66c2;
+  border: 2px #0a66c2 solid;
+}
+#openBtn:hover {
+  background-color: #004182;
+  border: 2px #004182 solid;
+}
+
+/* PROFILE - RIGHT SIDE */
+
+#profileRight a {
+  text-decoration: none;
+}
+
+#rightSideUserImg {
+  width: 2rem;
+  object-fit: cover;
+}
+
+/* UTILITY CALSSES: */
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+#followBtn {
+  border-radius: 25px;
+  font-size: 0.85rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: #5e5e5e solid 1pt;
+  color: #5e5e5e;
+  font-weight: bold;
+}
+
+#followBtn:hover {
+  background-color: #ebebeb;
+  box-shadow: inset 0 0 0 2px #5e5e5e;
+}
+
+/* -----------------------------------------------
+NEW SYLING FOR TopNav - search & deleteButton
+--------------------------------------------------*/
+/* TOP NAV: FORM */
+#parentDivForm {
+  position: relative;
+  width: 444px;
+}
+
+#topNavFormDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  justify-content: center;
+  position: relative;
+}
+#topNavFormList {
+  position: absolute;
+  top: 42px;
+  left: 42px;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  width: 96%;
+  padding: 0;
+  /* visibility: hidden; */
+  overflow: hidden;
+  z-index: 2;
+  background-color: white;
+}
+
+#topNavSerachIcon {
+  position: absolute;
+  transform: translateY(2.5px);
+  color: #666666;
+}
+#topNavDeleteInput {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  color: #666666;
+  cursor: pointer;
+}
+#topNavDeleteInput:hover {
+  color: #191919;
+}
+
+#topNavFormControl {
+  padding-left: 1.75rem;
+}
+.formListItems {
+  list-style: none;
+  margin: 0.5rem 0;
+}
+/* PROFILE - RIGHT SIDE */
+#rightSideUserImg {
+  width: 2rem;
+  object-fit: cover;
+}
+
+/* EXPERIENCE */
+#experienceList {
+  padding: 0;
+}
+
+/* UTILITY CALSSES: */
+.line-clamp-one {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+#followBtn {
+  border-radius: 25px;
+  font-size: 0.85rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grow {
+  transition: transform 350ms ease-out;
+  cursor: pointer;
+}
+.grow:hover {
+  transform: scale(1.1);
+}
+
+/*home- left feed*/
+
+.left-feed-box {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: #c6c5c3 0px 0px 5px;
+  overflow: hidden;
+}
+#top-left-home {
+  position: relative;
+}
+#top-left-home-backgroundImage {
+  background-image: url(https://farm5.staticflickr.com/4902/44891418625_2056c2bf9f_o.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 80px;
+}
+#top-left-home-userprofile-pic {
+  position: absolute;
+  top: 40px;
+  left: 99px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: solid white 2pt;
+}
+#top-left-home-bottom {
+  padding-top: 3.5em;
+}
+.top-left-line-breaks {
+  border-bottom: 1px #c6c5c3 solid;
+}
+
+.top-left-link-boxes svg {
+  color: black;
+}
+
+.top-left-link-boxes > a {
+  text-decoration: none;
+  color: gray;
+  font-weight: 500;
+  font-size: 10pt;
+}
+.top-left-link-boxes > a:hover {
+  text-decoration: none;
+  color: gray;
+}
+.top-left-link-boxes {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+.top-left-link-boxes:hover {
+  background-color: lightgray;
+}
+.top-left-direct-link:hover {
+  background-color: lightgray;
+}
+
+#premiumTag {
+  color: black;
+  text-decoration: underline;
+  font-size: 10pt;
+}
+
+#root
+  > div.container
+  > div
+  > div.pr-0.col-lg-3
+  > div
+  > a.NoTextDec
+  > div.px-3.py-3.top-left-direct-link:hover
+  #premiumTag {
+  color: blue;
+}
+
+/*Rules used repeatedly*/
+a.NoTextDec:hover {
+  text-decoration: none;
+}
+#premiumBox {
+  width: 15px;
+  height: 15px;
+  border-radius: 3px;
+  background-image: linear-gradient(45deg, #e7a33e 50%, #f8c77e 50%);
+}
+
+.new-post {
+  background-color: white;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: #c6c5c3 0px 0px 5px;
+}
+
+.right-feed-box {
+  background-color: white;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: #c6c5c3 0px 0px 5px;
+}
+
+.main-feed-content {
+  width: 200px;
+}
+
+.news-feed-post {
+  background-color: white;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: #c6c5c3 0px 0px 5px;
+}
+
+hr {
+  border: 0;
+  display: inline;
+  width: 80%;
+  background-color: #bfb9b9;
+  height: 1px;
+}
+span {
+  display: inline-block;
+  font-size: 0.8rem;
+}
+
+.new-post-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.new-post-form {
+  width: 400px;
+  border: 1px solid black;
+  border-radius: 8px;
+  margin-top: 5px;
+}
+
+.new-post-type a {
+  font-size: 2em;
+  color: gray;
+  font-weight: 700;
+}
+.new-post-type a:hover {
+  transform: scale(1.1);
+}
+
+.news-post-profile-image {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.commentsAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.commentInput {
+  width: 425px;
+  height: 40px;
+  margin-top: 15px;
+  border-radius: 20px;
+  padding-left: 15px;
+  margin-left: 5px;
+  overflow-y: auto;
+}
+
+.commentBox {
+  width: 100%;
+  height: auto;
+  background-color: #e7e1e1;
+  border: white;
+  border-radius: 10px;
+}
+
+.commentName {
+  font-size: 0.9em;
+  color: #0a66c2;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.commentAction {
+  font-size: 0.75rem;
+  color: #004182;
+  font-weight: 600;
+}
+.commentAction:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.editComment {
+  width: 400px;
+  border: 1px solid black;
+  background-color: #fffcfc;
+  border-radius: 10px;
+}
+
+.openLikes:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.commentText {
+  font-size: 1rem;
+}
+
+.bottom-post-divider {
+  border: 0;
+  width: 100%;
+  background-color: #a9a2a2;
+  height: 1px;
+}
+
+.post-action-buttons a {
+  color: black;
+  text-decoration: none;
+}
+.post-action-buttons a:hover {
+  transform: scale(1.2);
+  text-decoration: none;
+  color: black;
+}
+
+.commentLink {
+  color: black;
+}
+
+.commentLink:hover {
+  color: black;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.new-post-button {
+  width: 400px;
+  height: 50px;
+  text-align: left;
+  background-color: rgb(255, 255, 255) !important;
+  border: 1px solid black !important;
+  border-radius: 30px !important;
+  padding-left: 20px !important;
+}
+
+.privacy-button {
+  border-radius: 30px !important;
+  margin-top: -10px !important;
+  height: 30px;
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+}
+
+.globe-icon {
+  margin-right: 5px;
+  margin-top: -3px;
+}
+
+.expand-icon-privacy {
+  margin-left: 5px;
+  margin-top: -3px;
+}
+
+.new-post-textarea {
+  border: none !important;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+}
+
+.emoji-picker {
+  font-size: 1.5rem;
+  margin-left: 10px;
+}
+
+.emoji-picker:hover {
+  cursor: pointer;
+}
+
+.footer-icons-new-post {
+  font-size: 1rem;
+}
+
+.footer-icons-new-post:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+footer #footerLogo {
+  color: #0a66c2;
+}
+.footerLinks a {
+  color: #5e5e5e;
+  font-size: 10pt;
+  font-weight: 400;
+}
+.footerLinks a:hover {
+  color: blue;
+}
+.m-0.footerBoldText {
+  font-weight: 600;
+}
+
+.smallFooterIcon {
+  color: #5e5e5e;
+}
+#footerLangSelector {
+  border-radius: 5px;
+  font-size: 10pt;
+  color: #5e5e5e;
+  padding: 0.5em 0.5em;
+}
+
+#footerLangSelector:hover {
+  box-shadow: inset 0 0 0 2px;
+}
+
+.upload-post-image:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.altFooterLinks a {
+  color: #5e5e5e;
+  font-size: 10pt;
+}
+
+.altFooterLinks .altFooterLinkItems {
+  padding: 0;
+  text-align: center;
+}
+
+#littleLogo {
+  color: #0a66c2;
+}
+
+.post-image {
+  width: 500px;
+}
+
+.like-icon {
+  font-size: 1.3rem;
+  margin-right: 5px;
+}
+
+.likes {
+  font-size: 1.1rem;
+}
